@@ -78,3 +78,31 @@ for ch in word :
         s +=ch
 
 print(s)
+
+
+#string indexing and slicing 
+#string is orderd collection of characters
+
+msg="hello world .I love to read programing books in evening"
+## len function to find the len of string
+print(f"lenght of msg is {len(msg)}")
+
+## string is ordered collection so it has indexing and slicing indexing start from 0 and in slicing we can take a peicpre
+#   of string string is immuateble we cant change actual string
+print(msg[6:13:1]) # here starting of index ending of index and then steps 
+# we can also do reverse indexing in which last charater will start from -1
+
+
+
+# craete a program gives all the vowel in msg
+
+res=[ch for ch in msg if ch in 'aeiou']
+print(res)
+
+from collections import Counter
+print(dict(Counter(res)))
+
+
+
+
+
