@@ -67,7 +67,6 @@ for d in data :
 
 print(new)
 
-
 # dictionaries operation 
 
 print(new['mango'])

@@ -97,3 +97,30 @@ where salary > (select  avg(salary) from employee);
 select  max(salary)from employee
 where salary < (select max(salary) from employee);
 
+
+
+-- ## window function is analyitical function used in sql
+select dept_id ,max(salary) from employee 
+group by dept_id;
+
+
+select e.*,
+max(salary)  over (partition by  dept_id)  as max_salary
+from employee e;
+
+
+select e.*,
+row_number() over() as rn 
+from employee e
+order by salary desc;
+
+select * from 
+(select e.*,
+row_number() over() as rn 
+from employee e
+order by salary desc) x
+where x.rn=2;
+select e.*,
+row_number() over(partition by dept_id order by salary desc ) as rn 
+from employee e;
+

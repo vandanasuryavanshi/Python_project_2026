@@ -121,3 +121,20 @@ print(n1,n2)
 
 import random
 print(random.randint( 1,50))
+
+data=[{'apple':5,"banana":7},{'banana' :3,'mango':4},{'garpes':12,"apple":2},{'mango':4,'papaya':7}]
+fruits ={}
+for d in data:
+    for fruit ,q in d.items():
+        if fruit  in fruits :
+             fruits[fruit] +=q 
+        else :
+            fruits[fruit]=q 
+
+print(fruits)
+
+x=[i*i for i in range (1,50) if i%3 == 0 and i%5==0]
+print(x)
+
+for i in enumerate(x):
+    print(i)
